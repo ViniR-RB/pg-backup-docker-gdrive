@@ -8,5 +8,4 @@ services:
     image: alpine:latest
     env_file: .env
     volumes:
-      - ./dados:/dados
       - ./scripts:/scripts
