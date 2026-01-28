@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  backup:
+    container_name: backup-cron-rclone
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: alpine:latest
+    env_file: .env
+    volumes:
+      - ./dados:/dados
+      - ./scripts:/scripts
